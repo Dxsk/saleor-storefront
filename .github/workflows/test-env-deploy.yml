@@ -68,6 +68,8 @@ jobs:
           npm run build
 
       - name: Run build storybook
+        env:
+          NODE_OPTIONS: --max-old-space-size=2048
         run: |
           npm run build-storybook
 
